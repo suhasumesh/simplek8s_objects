@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  client-node-port
+spec:
+  selector:
+    component:  web
+  type:  NodePort
+  ports:
+  - port:  3050
+    targetPort:  3000
+    nodePort: 31515
+
+
+    
